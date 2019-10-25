@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <title>CoderCafeOrder</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style>
+    
+    *{
+        background-color: #c28d4b;
+    }
+    body {
+        text-align:center; 
+        
+    }
+    form{
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    li{
+        list-style-type: none;
+        border: groove #6b5234;
+        border-width: 5px;
+        border-radius:10px;
+        margin-bottom: 10px;
+    }
+
+    div, p{
+        font-size: 120%;
+        margin:0px;
+    }
+    h1{
+        color:#492e16;
+    }
+    p, button{
+        color: #3c311f;
+    }
+
+    .responsive{
+            width: 100%;
+            height: auto;
+            min-width:150px;
+            max-width:40%;
+            text-align: center;
+            vertical-align: center;
+    }
+
+    #summary{
+        vertical-align: middle;
+    }
+    
+    button{
+        border: solid;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        color: #241c15;
+        font-size: 16px;
+        border-radius: 10px;
+        font-size: 80%;
+        background-color: #6b5234;
+        margin:10px 5px;
+    
+    }
+
+    footer{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;    
+        text-align:center;
+    }
+    .row {
+        display: flex;
+    }
+
+    .column {
+        flex: 50%;
+        padding:0px 20px 0px 20px;
+    }
+    
+    </style>
+
+    <form>
+            <h1 style= "font-size: 400%">Order</h1>
+            <p style= "font-size:200%"> We now deliver to your homes! Order now to treat yourself
+                to some of our delicious coffee now!</p>
+            <div class="row">
+                <div style="position:relative;" class="column" id = "order_list">
+                <li>
+                    <div class="row">
+                        <div class="column">
+                            <p>Mocca</p>
+                            <button type="button" class = "fade" onclick="calculate(0)">$3.99</button>
+                        </div>
+                        <div class="column">
+                            <img class="responsive" src= "mocha.jpg" height="80px" alt="mocha">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="column">
+                            <p>Cold Brew</p> 
+                            <button type = "button" class = "fade" onclick="calculate(1)">$4.25</button>
+                        </div>
+                        <div class="column">
+                            <img class="responsive" src="cold-brew.jpg" height="80px" alt="cold-brew">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="column">
+                            <p>Latte</p> 
+                            <button type = "button" class = "fade" onclick="calculate(2)">$4.25</button>
+                        </div>
+                        <div class="column">
+                            <img class="responsive" src="latte.jpg" height="80px" alt="latte">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="column">
+                            <p>Black</p> 
+                            <button type = "button" class = "fade" onclick="calculate(3)">$2.25</button>
+                        </div>
+                        <div class="column">
+                                 <img class="responsive" src="black.jpg" height="80px" alt="black coffee">
+                        </div>
+                    </div>
+                </li>
+                
+
+
+                </div>
+                <div style="position:relative;" class="column" id = "order_list">
+                        <li>
+                            <div class="row">
+                                <div class="column">
+                                    <p>Mocca</p>
+                                    <button type="button" class = "fade" onclick="calculate(0)">$3.99</button>
+                                </div>
+                                <div class="column">
+                                    <img class="responsive" src= "mocha.jpg" height="80px" alt="mocha">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="column">
+                                    <p>Cold Brew</p> 
+                                    <button type = "button" class = "fade" onclick="calculate(1)">$4.25</button>
+                                </div>
+                                <div class="column">
+                                    <img class="responsive" src="cold-brew.jpg" height="80px" alt="cold-brew">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="column">
+                                    <p>Latte</p> 
+                                    <button type = "button" class = "fade" onclick="calculate(2)">$4.25</button>
+                                </div>
+                                <div class="column">
+                                    <img class="responsive" src="latte.jpg" height="80px" alt="latte">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="column">
+                                    <p>Black</p> 
+                                    <button type = "button" class = "fade" onclick="calculate(3)">$2.25</button>
+                                </div>
+                                <div class="column">
+                                         <img class="responsive" src="black.jpg" height="80px" alt="black coffee">
+                                </div>
+                            </div>
+                        </li>
+                        
+        
+        
+                </div>
+
+                <div style="position:relative " class="column" id = "summary">
+                    <div style="padding:15px 10px 15px 5px" id = "order_summary"> </div>
+                    <div style="padding:15px 10px 15px 5px" id = "total_price"> </div>
+                    <button type = "button" onclick="res()"> Reset Order </button>
+                    <button type = "button" onclick= "deli()"> Order </button>
+                </div>
+            </div>
+
+        </form>
+        
+    <footer> Reach Us: +1 78155320475 || codercafe@gmail.com ||
+             Our Address: 274 Boston Ave, Medford/MA 
+    </footer>
+    <script language="Javascript" type="text/javascript">
+
+        let order = [["Mocca", 3.99 ], 
+                     ["Cold Brew", 4.25],
+                     ["Latte", 4.25],
+                     ["Black",2.25]
+                    ];
+
+        let count = [0,0,0,0];
+        
+        function res(){
+            document.getElementById('order_summary').innerHTML = "";
+            document.getElementById('total_price').innerHTML = "";
+            count = [0,0,0,0];
+
+        }
+        function deli(){
+            res();
+            document.getElementById('order_summary').innerHTML = "Your order is taken, thank you for choosing us.";
+
+        }
+           
+        function calculate(type){
+
+        let total = 0; 
+
+            switch(type){
+                case 0:
+                    count[0]++;
+                break;
+                case 1:
+                    count[1]++;
+                break;
+                case 2:
+                    count[2]++;
+                break;
+                case 3:
+                    count[3]++;
+                break;
+            }
+
+        let itemsize = order.length;
+        document.getElementById('order_summary').innerHTML = "Order Summary:</br>";
+            for (i = 0; i < itemsize; i++){
+                if (count[i] != 0){
+                    document.getElementById('order_summary').innerHTML += count[i] + " " + order[i][0] + " : " +  " $" + count[i]*order[i][1] + "</br>";
+                    total += order[i][1]*count[i];
+                }
+            };
+        
+        total = Math.round(total*100)/100;
+        document.getElementById('total_price').innerHTML = "Subotal: $" + total + "</br>" 
+                                                        + "Taxed Total (%15): $" + Math.round((total*1.15)*100)/100 + "</br>";
+                                                    
+
+        
+        }
+        
+      
+        $(document).ready(function(){
+            
+            $(".fade").click(function(){
+                $("#order_summary").fadeIn();
+                $("#total_price").fadeIn();
+            });
+        })
+
+    
+    </script>
+        
+    
+    
+
+</html>
