@@ -1,16 +1,16 @@
 <!doctype html>
 <html>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+
+<head>
     <title>CoderCafeOrder</title>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "style.css" />
+    
 
+</head>
     <style>
     
-    *{
-        background-color: #c28d4b;
-    }
+   
     body {
         text-align:center; 
         
@@ -33,7 +33,7 @@
         font-size: 120%;
         margin:0px;
     }
-    h1{
+    h1, h3{
         color:#492e16;
     }
     p, button{
@@ -87,12 +87,16 @@
     
     </style>
 
+
     <form>
             <h1 style= "font-size: 400%">Order</h1>
-            <p style= "font-size:200%"> We now deliver to your homes! Order now to treat yourself
+            <p style= "font-size:200%; padding-bottom: 15px;" > We now deliver to your homes! Order now to treat yourself
                 to some of our delicious coffee now!</p>
+            
             <div class="row">
-                <div style="position:relative;" class="column" id = "order_list">
+                
+                <div style="position:relative;" class="column">
+                        <h3>Beverages</h3>
                 <li>
                     <div class="row">
                         <div class="column">
@@ -141,48 +145,49 @@
 
 
                 </div>
-                <div style="position:relative;" class="column" id = "order_list">
+                <div style="position:relative;" class="column">
+                        <h3>Pastries</h3>
                         <li>
                             <div class="row">
                                 <div class="column">
-                                    <p>Mocca</p>
-                                    <button type="button" class = "fade" onclick="calculate(0)">$3.99</button>
+                                    <p>Croisstant</p>
+                                    <button type="button" class = "fade" onclick="calculate(4)">$2.50</button>
                                 </div>
                                 <div class="column">
-                                    <img class="responsive" src= "mocha.jpg" height="80px" alt="mocha">
+                                    <img class="responsive" src= "croissant.jpg" height="80px" alt="croissant">
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="row">
                                 <div class="column">
-                                    <p>Cold Brew</p> 
-                                    <button type = "button" class = "fade" onclick="calculate(1)">$4.25</button>
+                                    <p>Bagel</p> 
+                                    <button type = "button" class = "fade" onclick="calculate(5)">$3.49</button>
                                 </div>
                                 <div class="column">
-                                    <img class="responsive" src="cold-brew.jpg" height="80px" alt="cold-brew">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="column">
-                                    <p>Latte</p> 
-                                    <button type = "button" class = "fade" onclick="calculate(2)">$4.25</button>
-                                </div>
-                                <div class="column">
-                                    <img class="responsive" src="latte.jpg" height="80px" alt="latte">
+                                    <img class="responsive" src="bagel.jpg" height="80px" alt="bagel">
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="row">
                                 <div class="column">
-                                    <p>Black</p> 
-                                    <button type = "button" class = "fade" onclick="calculate(3)">$2.25</button>
+                                    <p>Macaron</p> 
+                                    <button type = "button" class = "fade" onclick="calculate(6)">$1.25</button>
                                 </div>
                                 <div class="column">
-                                         <img class="responsive" src="black.jpg" height="80px" alt="black coffee">
+                                    <img class="responsive" src="macaron.jpg" height="80px" alt="macaron">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="column">
+                                    <p>Pie</p> 
+                                    <button type = "button" class = "fade" onclick="calculate(7)">$5.50</button>
+                                </div>
+                                <div class="column">
+                                         <img class="responsive" src="pie.jpg" height="80px" alt="pie">
                                 </div>
                             </div>
                         </li>
@@ -209,10 +214,14 @@
         let order = [["Mocca", 3.99 ], 
                      ["Cold Brew", 4.25],
                      ["Latte", 4.25],
-                     ["Black",2.25]
+                     ["Black",2.25],
+                     ["Croissant", 2.50],
+                     ["Bagel", 3.49],
+                     ["Macaron", 1.25],
+                     ["Pie" , 5.50]
                     ];
 
-        let count = [0,0,0,0];
+        let count = [0,0,0,0,0,0,0,0];
         
         function res(){
             document.getElementById('order_summary').innerHTML = "";
@@ -230,20 +239,7 @@
 
         let total = 0; 
 
-            switch(type){
-                case 0:
-                    count[0]++;
-                break;
-                case 1:
-                    count[1]++;
-                break;
-                case 2:
-                    count[2]++;
-                break;
-                case 3:
-                    count[3]++;
-                break;
-            }
+            count[type]++;
 
         let itemsize = order.length;
         document.getElementById('order_summary').innerHTML = "Order Summary:</br>";
@@ -274,7 +270,4 @@
     
     </script>
         
-    
-    
-
 </html>

@@ -1,15 +1,16 @@
 <!doctype html>
 <html>
+    <head>
     <title>CoderCafeEvents</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css" />
+    <script src="http://use.edgefonts.net/butcherman.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    </head>
     <style>
     
-        *{
-            background-color: #c28d4b;
-        }
+       
         body {
             
             display: inline-block;
@@ -45,11 +46,12 @@
             height: auto;
         }
 
-        #img1,#img2 {
+        #img1,#img2,#img3{
             box-sizing: border-box;
             position:relative;
             min-width:250px;
-            max-width:100%;
+            max-width:250px;
+            
             text-align: center;
             vertical-align: center;
         }
@@ -84,7 +86,7 @@
         <body >
             <h1 style= "font-size: 300%">Coder Cafe Event List</h1>
             <div class = "column">
-                <div style = "text-align: center" class="row">
+                <div style = "text-align: center; border-top: 5px solid #744924; border-top-style:ridge; text-align: center" class="row">
                     <h2 >Java&Java Fridays</h2>
                 </div>
                 <div class= "row">
@@ -96,14 +98,14 @@
                         </p>
                     </div>
                     <div>
-                        <img class="responsive" id= "img1" src= "cafestock.jpg" height="150px" alt="coffeshop">
+                        <img class="responsive" id= "img1" src= "cafestock.jpg" alt="coffeshop">
                     </div>
                 </div>
                 <div style = "text-align: center; border-top: 5px solid #744924; border-top-style:ridge" class="row">
-                    <h2 >Fear the Code</h2> 
+                    <h2 style="font-family:butcherman;">Fear the Code</h2> 
                 </div>
-                <div  class = "row">
-                    <div >
+                <div class = "row">
+                    <div>
                         <h3>Date: 10/28/2019</h3>
                         <p>A Coder Cafe Halloween special event! There will be an easter hunt where you will look for 
                             clues for the secret links and passwords in this very website. Free coffee and muffins for anyone. Also, anyone who
@@ -111,9 +113,23 @@
                         </p>
                     </div>
                     <div>
-                        <img class="responsive" id= "img2" src= "haloevent.jpg" height="150px" alt="coffeshop">
+                        <img class="responsive" id= "img2" src= "haloevent.jpg" alt="coffeshop">
                     </div>
                 </div>
+                <div style = "text-align: center; border-top: 5px solid #744924; border-top-style:ridge" class="row">
+                    <h2>C++ Coffee</h2> 
+                </div>
+                <div  class = "row">
+                        <div >
+                            <h3>Every Monday, 3-6 PM</h3>
+                            <p>Our traditional C++ gathering. Enjoy delicious coffe and learn C++ from Tufts professors. Be prepared
+                                to learn about C++ concepts as well as our fresh baked croissant.
+                            </p>
+                        </div>
+                        <div>
+                            <img class="responsive" id= "img3" src= "c++.jpg" alt="coffeshop">
+                        </div>
+                    </div>
                     
                 
             </div>
@@ -125,7 +141,7 @@
 
 
 
-        </body>
+    </body>
 
     <footer><b> Reach Us: +1 78155320475 || codercafe@gmail.com ||
              Our Address: 274 Boston Ave, Medford/MA </b>
