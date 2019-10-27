@@ -3,10 +3,10 @@
 <head>
   <link type="text/css" rel="stylesheet" href="style.css"/>
   <title> Reviews & Testimonials </title>
-  <a href="https://bethkrikorian.github.io/midterm"> Back to home </a> 
+  <a href="https://bethkrikorian.github.io/codercafe"> Back to home </a> 
   <style>
     a:link {
-      color: #000;
+      color: #3aa7c2;
       text-decoration: none;
       font-family: Courier, sans-serif;
       font-size: 20px;
@@ -16,7 +16,7 @@
     }
 
     a:visited {
-      color: #623f1f;
+      color: #3aa7c2;
       text-decoration: none;
       font-family: Courier, sans-serif;
       font-size: 20px;
@@ -26,7 +26,7 @@
     }
 
     a:hover {
-      color: #623f1f;
+      color: #4d3118;
       font-style: italic;
       font-family: Courier, sans-serif;
       font-size: 20px;
@@ -36,7 +36,7 @@
     }
 
     body {
-      background-color: #ede6d5;
+      background-color: #ddcdbf;
       margin-top: 20px;
       margin-bottom: 20px;
     }
@@ -45,7 +45,7 @@
       font-size: 50px;
       font-weight: bold;
       text-decoration: none;
-      color: #623f1f;
+      color: #3aa7c2;
       text-align: center;
       font-family: Courier, sans-serif;
     }
@@ -53,7 +53,7 @@
     h2 {
       font-size: 40px;
       font-weight: bold;
-      color: #623f1f;
+      color: #4d3118;
       text-align: center;
       font-family: Courier, monospace;
       margin-right: 25px;
@@ -63,7 +63,7 @@
     h3 {
       font-size: 25px;
       font-weight: normal;
-      color: #623f1f;
+      color: #4d3118;
       text-align: center;
       font-family: Courier, monospace;
       margin-right: 25px;
@@ -73,91 +73,127 @@
     p {
       margin-right: 25px;
       margin-left: 25px;
-      font-family: Courier, monospace; 
+      font-family: Candara, sans-serif; 
+      line-height: 2em;
       font-size: 15px;
-      color: #623f1f;
+      color: #4d3118;
     }
 
     form {
       text-align: left;
       border-radius: 3px;
       margin-left: 20px;
-      font-family: Courier, monospace;
-    }
-
-    input {
-      height: 100px;
-      width: 500px;
-      font-family: Courier, monospace;
+      font-family: Candara, sans-serif; 
     }
 
     textarea {
       text-align: left;
       border-radius: 3px;
-      font-family: Courier, monospace;
+      font-family: Candara, sans-serif; 
       font-weight: bold;
+    }
+
+    input {
+      height: 45px;
+      width: 200px;
+      border: solid; 
+      padding: 10px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      color: #241c15;
+      border-radius: 10px;
+      background-color: #6b5234;
+      margin: 10px 5px;  
     }
   </style>
 </head>
 <body>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript">
     function refresh() 
     {
-
+        var textbox = document.getElementById("review").value;
+        var username = document.getElementById("name").value;
+        $("#newReview").append("<p><b>" + username + ": </b>" + textbox + "</p>");
+        review.value = review.defaultValue;
+        name.value = name.defaultValue;
     }
   </script>
+
+  <header>
+      <div class = "logo"><a href = "#"><img src = "./coder-cafe-logo.png" class = "logo-img"/></a>
+      </div> <!-- logo -->
+  </header>
 
   <h1> REVIEWS & TESTIMONIALS </h1>
   <br>
   <h2> Reviews </h2>
   <h3> Did you enjoy your visit? Do you have recommendations for Coder Café? <br>Let us know by leaving us a review! </h3>
   <br>
+  <div id = "newReview">
+  </div>
+  <br>
   <p>
-    <b>Jackie L: </b>Amazing café! Loved the atmosphere and the coffee. Highly recommend the Pumpkin Spice Latté. 
+    <b>Jackie L:</b> Amazing café! Loved the atmosphere and the coffee. Highly recommend the Pumpkin Spice Latté. 
   </p>
   <br>
   <p>
-    <b>Evan R: </b>Attended a great event here called C ++ Coffee! Learned a lot about C++, met new people, and enjoyed
-    a fresh, hot cup of dark roast. 
+    <b>Evan R:</b> Attended a great event here called C ++ Coffee! Learned a lot about C++, met new people, and enjoyed a fresh, hot cup of dark roast. 
   </p>
   <br>
   <p>
-    <b> Macy C: </b>omg absolutely LOVE Coder Café!!! Already followed their social media accounts and told all my friends
-    about this place. Catch me studying here all day every day! 
+    <b> Macy C:</b> omg absolutely LOVE Coder Café!!! Already followed their social media accounts and told all my friends about this place. Catch me studying here all day every day! 
   </p>
   <br>
   <p>
-    <b> Lane D: </b>Stopped in to grab a coffee on my way to work the other morning. The service was incredible. I was worried
-    when I saw the line, but the baristas took care of every customer quickly and efficiently. I’ll be back here on my
+    <b> Lane D:</b> Stopped in to grab a coffee on my way to work the other morning. The service was incredible! I was worried when I saw the line, but the baristas took care of every customer quickly and efficiently. I’ll be back here on my
     way to work every morning! 
   </p>
   <br>
   <p>
-    <b>Kyle T: </b> This place is awesome. I’m a tough-to-please cappuccino snob, and this capp was one of the best I’ve ever
-    had! Perfect temperature, beautifully foamed milk, and just the right amount of cinnamon on top. 
+    <b>Claire E:</b> I attended "Fear the Code" and had such a great time! I am a computer scientist and love Coder Café's events because of the positive, laid-back atmosphere at their events. Such a great place for coders of any age and experience level! 
   </p>
   <br>
   <p>
-    <b>Cassidy P: </b>I’ve been coming to Coder Café for the cold brew almost every day since it opened. Can’t get enough of it! 
+    <b>Kyle T:</b> This place is awesome. I’m a tough-to-please cappuccino snob, and this capp was one of the best I’ve ever had! Perfect temperature, beautifully foamed milk, and just the right amount of cinnamon on top. 
   </p>
   <br>
   <p>
-    <b>Talia M: </b>What a cute coffee shop! Love the decor and atmosphere - great place to concentrate and do my work. 
-    The seating area is quiet and cozy, which is right up my alley. Would love to see banana or zucchini bread in
-    the pastry case :) 
+    <b>Cassidy P:</b> I’ve been coming to Coder Café for the cold brew almost every day since it opened. Can’t get enough of it! 
   </p>
-  <br> 
+  <br>
+  <p>
+    <b>Miles O:</b> Coder Café has everything I want! Delicious coffee and specialty drinks, pastries to satisfy my sweet tooth, and great sandwich selections. I come here almost every day and got my coworkers to hop on the Coder Café train! 
+  </p>
+  <br>
+  <p>
+    <b>Talia M:</b> What a cute coffee shop! Love the decor and atmosphere - great place to concentrate and do my work. The seating area is quiet and cozy, which is right up my alley. Would love to see banana or zucchini bread in the pastry case :) 
+  </p>
+  <br>
+  <p>
+    <b>Mike K:</b> Coder Café is dope!! It's so nice to have a great coffee shop so close to Tufts' campus. I come here all the time, especially on weekends. I personally really like the BLT and the chocolate croissant. Some of my friends went to the Java & Java last week and told me about it. I'm definitely going to check out their events and come to one soon! 
+  </p>
+  <br>
 
   <form>
     <br>
-    <b>Leave a review here! </b><br><br>
-    <textarea name="review" rows="10" cols="72">
+    <b>Name</b><br>
+    <textarea id = "name" rows = "1" cols = "25">
+    </textarea><br><br>
+    <b>Leave your review here! </b><br>
+    <textarea id="review" rows="10" cols="80">
     </textarea>
     <br>
-    <input style="font-size:20px; font-style: monospace; color: #000" type = "button" value = "Submit review" onclick = "history.go(0)">
+    <input style="font-size:20px; font-weight: bold; font-family: Candara, sans-serif; color: #000" type = "button" value = "Submit review" onclick = "refresh()">
     <br>
   </form>
+
+   <div class = "logo"><a href = "#"><img src = "./artsy_coffee.jpg" 
+    class = "artsy_coffee-img"/></a>
+   </div> <!-- logo -->
+
   <br>
   <br>
   <br>
@@ -167,28 +203,32 @@
   </p>
   <br>
   <p>
-    “Coder Café has become a second home to me! The events have introduced me to people I now call my friends, taught me new programming skills and languages, and, most importantly, introduced my taste buds to new kinds of coffee!” <br><br>
+    “Coder Café has become a second home to me! The events have introduced me to people I now call my friends, taught me new programming skills and languages, and, most importantly, introduced my taste buds to new kinds of coffee!” <br>
     <b> - Diane </b>
   </p>
   <br>
   <p>
-    "I cannot say enough good things about Coder Café. As a middle-aged woman in the workplace, I truly apprecaite that Coder Café offers events for unexperienced coders, like myself. I never thought I had the chance to learn to code because of my age and job. It was inspiriing to meet other women like myself and get to know them and the basics of Javascript over a cup of Java!" <br><br>
+    "I cannot say enough good things about Coder Café. As a middle-aged woman in the workplace, I truly apprecaite that Coder Café offers events for unexperienced coders, like myself. I never thought I had the chance to learn to code because of my age and job. It was inspiriing to meet other women like myself and get to know them and the basics of Javascript over a cup of Java!" <br>
     <b> - Katherine </b>
   </p>
   <br>
   <p>
       "We have developed a great relationship with Coder Café because of the wonderful ways in which they craft and sell our coffee beans. This establishment really knows their coffee - we are proud to be associated with Coder Café!" <br>
-      <br>
       <b> - New England Coffee </b>
   </p>
   <br>
   <p>
-    "I am proudly a customer of Coder Café because of their high-quality products, service, and events. I brought my 13 year old twins to their 'Koding for Kids' event. My son and daughter had no coding experience whatsoever and absolutely LOVED it after coming to Coder Café's event. They will not stop talking about it and can't wait for the next event! Giving children the opportunity to learn to code in a fun environment is so imporant. They are the future! Thank you for all you do for the community, Coder Café!" <br><br>
+    "I'm a computer science student at Tufts and tell absolutely everyone about Coder Café, whether they code or not! There is something for everyone here, whether you're looking for a study spot, quick coffee, or community events. I take an extra 10-15 minutes every morning to walk here just to grab my daily coffee. The events have expanded my horizons and have been great for my career in terms of networking. I've met a lot of experienced computer scientists who have provided me with wonderful advice and with whom I've established meaningful relationships. The location has proven to be an essential to my success because it is so close to campus and is also close to Boston, which attracts a lot of attention from coders who live all over the city. I can't say enough about Coder Café and all of the amazing things it offers!"<br>
+    <b> - Nikki </b>
+  </p>
+  <br>
+  <p>
+    "I am proudly a customer of Coder Café because of their high-quality products, service, and events. I brought my 13 year old twins to their 'Koding for Kids' event. My son and daughter had no coding experience whatsoever and absolutely LOVED it after coming to Coder Café's event. They will not stop talking about it and can't wait for the next event! Giving children the opportunity to learn to code in a fun environment is so imporant. They are the future! Thank you for all you do for the community, Coder Café!" <br>
     <b> - Melissa </b>
   </p>
   <br>
   <p>
-      "Not only do I love Coder Café's products and events, but I also love the employees. The baristas are very attentive, welcoming, and so easy to talk to. The owners love what they do and it is truly reflected in the environment at Coder Café." <br><br>
+      "Not only do I love Coder Café's products and events, but I also love the employees. The baristas are very attentive, welcoming, and so easy to talk to. The owners love what they do and it is truly reflected in the environment at Coder Café." <br>
       <b> - Marco </b>
   </p>
   <br>
