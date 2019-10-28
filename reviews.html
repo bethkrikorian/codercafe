@@ -72,8 +72,9 @@
         var textbox = document.getElementById("review").value;
         var username = document.getElementById("name").value;
         $("#newReview").append("<br><p><b>" + username + ": </b>" + textbox + "</p>");
-        review.value = review.defaultValue;
-        name.value = name.defaultValue;
+        /* review.value = review.defaultValue; */
+	document.getElementById("name").reset();
+	document.getElementById("review").reset();
     }
   </script>
   
