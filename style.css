@@ -153,6 +153,10 @@ body {
     background-color: #ddcdbf;
 }
 
+a {
+    text-decoration: none;
+}
+
 /******************************** HELPFUL STYLES *****************************/
 
 .light {
