@@ -161,6 +161,10 @@ a {
     text-decoration: none;
 }
 
+body {
+    text-align: left !important;
+}
+
 /******************************** HELPFUL STYLES *****************************/
 
 .light {
