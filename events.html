@@ -2,7 +2,7 @@
 <html>
     <head>
     <title>CoderCafeEvents</title>
-    <link rel = "stylesheet" type = "text/css" href = "./style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "style.css" />
     <script src="http://use.edgefonts.net/butcherman.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
 
@@ -19,13 +19,7 @@
             margin-right: auto;
         }
       
-        li{
-            list-style-type: none;
-            border: groove #ddcdbf;
-            border-width: 5px;
-            border-radius:10px;
-            margin-bottom: 10px;
-        }
+       
     
         div, p{
             font-size: 115%;
@@ -46,7 +40,7 @@
             height: auto;
         }
 
-        #img1,#img2,#img3{
+        #img1,#img2,#img3, #img4{
             box-sizing: border-box;
             position:relative;
             min-width:250px;
@@ -64,14 +58,7 @@
         h2{
             margin:5px 0px 5px 0px;
         }
-        footer{
-            
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;    
-            text-align:center;
-        }
+        
         .row {
             display: flex;
         }
@@ -84,31 +71,31 @@
         </style>
 
         <body >
-            <header>
-            <div class="header-content">
-                <p class = "left light">Tel: (781) GO-CODER</p>
-                <p class = "right light">Email: info@codercafe.com</p>
-            </div>
-        </header>
-
-        <nav>
-            <div class = "left nav-stuff">
-                <ul>
-                    <a class="nav-link" href = "./about-us"><li>About</li></a>
-                    <a class="nav-link" href = "./products"><li>Products</li></a>
-                    <a class="nav-link" href = "./order"><li>Order</li></a>
-                </ul>
-            </div>
-            <div class = "logo nav-stuff"><a href = "./index"><img src = "./coder-cafe-logo.png" class = "logo-img"/></a>
-            </div> <!-- logo -->
-            <div class = "right nav-stuff">
-                <ul>
-                    <a class="nav-link" href = "./events"><li>Events</li></a>
-                    <a class="nav-link" href = "./reviews"><li>Reviews</li></a>
-                    <a class="nav-link" href = "./contact"><li>Contact</li></a>
-                </ul>
-            </div>
-        </nav>
+                <header>
+                        <div class="header-content">
+                            <p class = "left light">Tel: (781) GO-CODER</p>
+                            <p class = "right light">Email: info@codercafe.com</p>
+                        </div>
+                    </header>
+            
+                    <nav>
+                        <div class = "left nav-stuff">
+                            <ul>
+                                <a class="nav-link" href = "./about-us"><li>About</li></a>
+                                <a class="nav-link" href = "./products"><li>Products</li></a>
+                                <a class="nav-link" href = "./order"><li>Order</li></a>
+                            </ul>
+                        </div>
+                        <div class = "logo nav-stuff"><a href = "./index"><img src = "./coder-cafe-logo.png" class = "logo-img"/></a>
+                        </div> <!-- logo -->
+                        <div class = "right nav-stuff">
+                            <ul>
+                                <a class="nav-link" href = "./events"><li>Events</li></a>
+                                <a class="nav-link" href = "./reviews"><li>Reviews</li></a>
+                                <a class="nav-link" href = "./contact"><li>Contact</li></a>
+                            </ul>
+                        </div>
+                    </nav>
             
             <h1 style= "font-size: 300%">Coder Cafe Event List</h1>
             <div class = "column">
@@ -155,13 +142,27 @@
                         <div>
                             <img class="responsive" id= "img3" src= "c++.jpg" alt="coffeshop">
                         </div>
-                    </div>
-                    
+                </div>
+                
+                <div style = "text-align: center; border-top: 5px solid #744924; border-top-style:ridge" class="row">
+                    <h2>Coder Cafe: Pie Contest</h2> 
+                </div>
+                <div  class = "row">
+                        <div >
+                            <h3>December 12 2019</h3>
+                            <p>Everyone is welcome to our first pie eating contest. We invite you coders to taste our delicious 
+                                <i>Raspberry Pie</i> and whoever eats the most pie in an hour wins the newest <b>Raspberry Pi 4</b>!
+                            </p>
+                        </div>
+                        <div>
+                            <img class="responsive" id= "img4" src= "raspie.jpg" alt="raspberry pi">
+                        </div>
+                </div>
+                
+            
                 
             </div>
                 
-                    
-                    
                 
         
 
@@ -169,8 +170,17 @@
 
     </body>
 
-    <footer><b> Reach Us: +1 78155320475 || codercafe@gmail.com ||
-             Our Address: 274 Boston Ave, Medford/MA </b>
-    </footer>
-
+    <footer>
+            <div class = "left"> <!-- address -->
+                <p><b>Address</b></p>
+                <p>880 Broadway</p>
+                <p>Medford, MA 02155</p>
+            </div>
+            <div class = "right right-align"> <!-- footer menu -->
+                <p><b>Quick Links</b></p>
+                <a><p>Order</p></a>
+                <a><p>Contact</p></a>
+            </div>
+        </footer>
+        
 </html>
