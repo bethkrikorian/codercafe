@@ -97,24 +97,24 @@ a.nav-link:hover {
 
 @media only screen and (max-width: 1000px) {
     nav ul a li {
-        padding: 2em 0.8em;       
-        font-size: 1.0em;    
+        padding: 2em 0.8em !important;       
+        font-size: 1.0em !important;    
     }
 }
 
 @media only screen and (max-width: 768px) {
     nav ul a li {
-        display: block;
-        padding: 0.15em 0.8em;       
-        font-size: 1.0em;  
+        display: block !important;
+        padding: 0.15em 0.8em !important;       
+        font-size: 1.0em !important;  
     }
 
     nav ul {
-        margin-top: 0.4em;
+        margin-top: 0.4em !important;
     }
 
     a.nav-link {
-        text-decoration: none;
+        text-decoration: none !important;
     }
 }
 
