@@ -207,6 +207,7 @@ a {
     margin: 0.8em;
     display: inline-block;
     transition: 0.4s;
+    text-decoration: none;
 }
 
 .teal-button:hover {
