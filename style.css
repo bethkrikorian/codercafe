@@ -141,20 +141,20 @@ footer p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Courier New', monospace;
+    font-family: 'Courier New', monospace !important;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 40px !important;
 }
 
 p {
-    font-family: 'Candara', sans-serif;
-    color: #241d13;
+    font-family: 'Candara', sans-serif !important;
+    color: #241d13 !important;
 }
 
 body {
-    background-color: #ddcdbf;
+    background-color: #ddcdbf !important;
 }
 
 a {
