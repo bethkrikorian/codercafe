@@ -4,7 +4,7 @@
 <head>
     <title>CoderCafeOrder</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel = "stylesheet" type = "text/css" href = "style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "./style.css" />
     
 
 </head>
@@ -89,126 +89,154 @@
 
 
     <form>
-            <h1 style= "font-size: 400%">Order</h1>
-            <p style= "font-size:200%; padding-bottom: 15px;" > We now deliver to your homes! Order now to treat yourself
-                to some of our delicious coffee now!</p>
-            
-            <div class="row">
-                
-                <div style="position:relative;" class="column">
-                        <h3>Beverages</h3>
-                <li>
-                    <div class="row">
-                        <div class="column">
-                            <p>Mocca</p>
-                            <button type="button" class = "fade" onclick="calculate(0)">$3.99</button>
-                        </div>
-                        <div class="column">
-                            <img class="responsive" src= "mocha.jpg" height="80px" alt="mocha">
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="row">
-                        <div class="column">
-                            <p>Cold Brew</p> 
-                            <button type = "button" class = "fade" onclick="calculate(1)">$4.25</button>
-                        </div>
-                        <div class="column">
-                            <img class="responsive" src="cold-brew.jpg" height="80px" alt="cold-brew">
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="row">
-                        <div class="column">
-                            <p>Latte</p> 
-                            <button type = "button" class = "fade" onclick="calculate(2)">$4.25</button>
-                        </div>
-                        <div class="column">
-                            <img class="responsive" src="latte.jpg" height="80px" alt="latte">
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="row">
-                        <div class="column">
-                            <p>Black</p> 
-                            <button type = "button" class = "fade" onclick="calculate(3)">$2.25</button>
-                        </div>
-                        <div class="column">
-                                 <img class="responsive" src="black.jpg" height="80px" alt="black coffee">
-                        </div>
-                    </div>
-                </li>
-                
-
-
-                </div>
-                <div style="position:relative;" class="column">
-                        <h3>Pastries</h3>
-                        <li>
-                            <div class="row">
-                                <div class="column">
-                                    <p>Croisstant</p>
-                                    <button type="button" class = "fade" onclick="calculate(4)">$2.50</button>
-                                </div>
-                                <div class="column">
-                                    <img class="responsive" src= "croissant.jpg" height="80px" alt="croissant">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="column">
-                                    <p>Bagel</p> 
-                                    <button type = "button" class = "fade" onclick="calculate(5)">$3.49</button>
-                                </div>
-                                <div class="column">
-                                    <img class="responsive" src="bagel.jpg" height="80px" alt="bagel">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="column">
-                                    <p>Macaron</p> 
-                                    <button type = "button" class = "fade" onclick="calculate(6)">$1.25</button>
-                                </div>
-                                <div class="column">
-                                    <img class="responsive" src="macaron.jpg" height="80px" alt="macaron">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="column">
-                                    <p>Pie</p> 
-                                    <button type = "button" class = "fade" onclick="calculate(7)">$5.50</button>
-                                </div>
-                                <div class="column">
-                                         <img class="responsive" src="pie.jpg" height="80px" alt="pie">
-                                </div>
-                            </div>
-                        </li>
-                        
-        
-        
-                </div>
-
-                <div style="position:relative " class="column" id = "summary">
-                    <div style="padding:15px 10px 15px 5px" id = "order_summary"> </div>
-                    <div style="padding:15px 10px 15px 5px" id = "total_price"> </div>
-                    <button type = "button" onclick="res()"> Reset Order </button>
-                    <button type = "button" onclick= "deli()"> Order </button>
-                </div>
+        <header>
+            <div class="header-content">
+                <p class = "left light">Tel: (781) GO-CODER</p>
+                <p class = "right light">Email: info@codercafe.com</p>
             </div>
+        </header>
 
-        </form>
+        <nav>
+            <div class = "left nav-stuff">
+                <ul>
+                    <a class="nav-link" href = "./about-us"><li>About</li></a>
+                    <a class="nav-link" href = "./products"><li>Products</li></a>
+                    <a class="nav-link" href = "./order"><li>Order</li></a>
+                </ul>
+            </div>
+            <div class = "logo nav-stuff"><a href = "./index"><img src = "./coder-cafe-logo.png" class = "logo-img"/></a>
+            </div> <!-- logo -->
+            <div class = "right nav-stuff">
+                <ul>
+                    <a class="nav-link" href = "./events"><li>Events</li></a>
+                    <a class="nav-link" href = "./reviews"><li>Reviews</li></a>
+                    <a class="nav-link" href = "./contact"><li>Contact</li></a>
+                </ul>
+            </div>
+        </nav>    
         
-    <footer> Reach Us: +1 78155320475 || codercafe@gmail.com ||
-             Our Address: 274 Boston Ave, Medford/MA 
-    </footer>
+        <div class = "page-container">
+            <h1 style= "font-size: 400%">Order</h1>
+                <p style= "font-size:200%; padding-bottom: 15px;" > We now deliver to your homes! Order now to treat yourself
+                    to some of our delicious coffee now!</p>
+
+                <div class="row">
+
+                    <div style="position:relative;" class="column">
+                            <h3>Beverages</h3>
+                    <li>
+                        <div class="row">
+                            <div class="column">
+                                <p>Mocca</p>
+                                <button type="button" class = "fade" onclick="calculate(0)">$3.99</button>
+                            </div>
+                            <div class="column">
+                                <img class="responsive" src= "mocha.jpg" height="80px" alt="mocha">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="column">
+                                <p>Cold Brew</p> 
+                                <button type = "button" class = "fade" onclick="calculate(1)">$4.25</button>
+                            </div>
+                            <div class="column">
+                                <img class="responsive" src="cold-brew.jpg" height="80px" alt="cold-brew">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="column">
+                                <p>Latte</p> 
+                                <button type = "button" class = "fade" onclick="calculate(2)">$4.25</button>
+                            </div>
+                            <div class="column">
+                                <img class="responsive" src="latte.jpg" height="80px" alt="latte">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="column">
+                                <p>Black</p> 
+                                <button type = "button" class = "fade" onclick="calculate(3)">$2.25</button>
+                            </div>
+                            <div class="column">
+                                     <img class="responsive" src="black.jpg" height="80px" alt="black coffee">
+                            </div>
+                        </div>
+                    </li>
+
+
+
+                    </div>
+                    <div style="position:relative;" class="column">
+                            <h3>Pastries</h3>
+                            <li>
+                                <div class="row">
+                                    <div class="column">
+                                        <p>Croisstant</p>
+                                        <button type="button" class = "fade" onclick="calculate(4)">$2.50</button>
+                                    </div>
+                                    <div class="column">
+                                        <img class="responsive" src= "croissant.jpg" height="80px" alt="croissant">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="column">
+                                        <p>Bagel</p> 
+                                        <button type = "button" class = "fade" onclick="calculate(5)">$3.49</button>
+                                    </div>
+                                    <div class="column">
+                                        <img class="responsive" src="bagel.jpg" height="80px" alt="bagel">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="column">
+                                        <p>Macaron</p> 
+                                        <button type = "button" class = "fade" onclick="calculate(6)">$1.25</button>
+                                    </div>
+                                    <div class="column">
+                                        <img class="responsive" src="macaron.jpg" height="80px" alt="macaron">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="column">
+                                        <p>Pie</p> 
+                                        <button type = "button" class = "fade" onclick="calculate(7)">$5.50</button>
+                                    </div>
+                                    <div class="column">
+                                             <img class="responsive" src="pie.jpg" height="80px" alt="pie">
+                                    </div>
+                                </div>
+                            </li>
+
+
+
+                    </div>
+
+                    <div style="position:relative " class="column" id = "summary">
+                        <div style="padding:15px 10px 15px 5px" id = "order_summary"> </div>
+                        <div style="padding:15px 10px 15px 5px" id = "total_price"> </div>
+                        <button type = "button" onclick="res()"> Reset Order </button>
+                        <button type = "button" onclick= "deli()"> Order </button>
+                    </div>
+                </div>
+
+            </form>
+
+        <footer> Reach Us: +1 78155320475 || codercafe@gmail.com ||
+                 Our Address: 274 Boston Ave, Medford/MA 
+        </footer>
+     </div>
     <script language="Javascript" type="text/javascript">
 
         let order = [["Mocca", 3.99 ], 
