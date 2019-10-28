@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<style>
+		nav ul {text-align:center; 
+			    position: relative;
+			    display:inline-block;
+			    list-style-type: none; 
+			    padding: 0px 60px;}
+		nav a {padding: 10px 60px; cursor: pointer;}
+
+		img {display: block; margin-left: auto; margin-right: auto; width: 100%;
+  			height: auto; max-width:600px;}
+  		p {text-align:center; margin: 0px 400px;}
+	</style>
+</head>
+
+<body>
+<div style = "width: 100%; text-align: center;">
+ <nav>
+ <ul>
+   <li>
+     <a id = "button0">Latte</a>
+     <a id = "button1" style="border-left: solid black; border-right: solid black">Black</a>
+     <a id = "button2" style="border-right: solid black">Cold Brew</a>
+     <a id = "button3">Mocha</a>
+   </li>
+  </ul>
+ </nav>
+</div> <br> <br>
+ <div id = "images">
+	<img id='image0' src='latte.jpg'>
+	<img id='image1' src='black.jpg'>
+	<img id='image2' src='cold-brew.jpg'>
+	<img id='image3' src='mocha.jpg'>
+</div> <br>
+<div id='texts'>
+	<p id ='text0'>A Coder latte is the creamiest of our espresso selections. Two-thirds of the beverage is steamed milk, poured over a shot of espresso and topped with a layer of milk foam.</p>
+	<p id='text1'>Our famous Black Coffee is made from high-quality 100% Arabica beans and is freshly ground and brewed continually throughout the day.</p>
+	<p id ='text2'>An ultra-smooth, full-bodied coffee like no other. We’ve steeped 100% Arabica beans in cold water for 12 hours to slowly extract all the flavor into this velvety brew.</p>
+	<p id='text3'>Did someone say layers on layers of hand-crafted deliciousness? Made with creamy milk and topped with two shots of espresso, our Mocha is just what you're looking for.</p>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script language="Javascript" type="text/javascript">
+
+$(document).ready(function(){
+
+    for (i = 0 ; i < 4; i++){
+		$("#image" + i).hide();
+		$("#text" + i).hide();
+	}
+
+	$("#button0").hover(function(){
+        	$("#image0").fadeIn().siblings().hide();
+        	$('#text0').fadeIn().siblings().hide();
+        }, function(){
+        	$("#image0").fadeOut().siblings().hide();
+        	$("#text0").fadeOut().siblings().hide();
+    });
+
+	$("#button1").hover(function(){
+        	$("#image1").fadeIn().siblings().hide();
+        	$('#text1').fadeIn().siblings().hide();
+        }, function(){
+        	$("#image1").fadeOut().siblings().hide();
+        	$("#text1").fadeOut().siblings().hide();
+    });
+
+	$("#button2").hover(function(){
+        	$("#image2").fadeIn().siblings().hide();
+        	$('#text2').fadeIn().siblings().hide();
+        }, function(){
+        	$("#image2").fadeOut().siblings().hide();
+        	$("#text2").fadeOut().siblings().hide();
+    });
+
+	$("#button3").hover(function(){
+        	$("#image3").fadeIn().siblings().hide();
+        	$('#text3').fadeIn().siblings().hide();
+        }, function(){
+        	$("#image3").fadeOut().siblings().hide();
+        	$("#text3").fadeOut().siblings().hide();
+    });
+
+});
+
+
+</script>
+</body>
+
+</html>
