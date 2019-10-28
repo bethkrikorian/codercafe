@@ -149,6 +149,10 @@ p {
     color: #241d13;
 }
 
+body {
+    background-color: #ddcdbf;
+}
+
 /******************************** HELPFUL STYLES *****************************/
 
 .light {
