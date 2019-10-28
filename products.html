@@ -6,12 +6,8 @@
    href = "./style.css" />
 	<style>
 		footer {
-			margin-top: -4em;
-			/*width: 100%;*/
-		}
-		
-		div.content-inside {
-			padding-bottom: 4em;
+			position: absolute;
+			bottom: 0;
 		}
 		
 		section.nav ul {text-align:center; 
@@ -28,8 +24,7 @@
 </head>
 
 <body>
-
-   <header>
+        <header>
             <div class="header-content">
                 <p class = "left light">Tel: (781) GO-CODER</p>
                 <p class = "right light">Email: info@codercafe.com</p>
@@ -54,35 +49,47 @@
                 </ul>
             </div>
         </nav>
-<div class = "page-container">
-		<div style = "width: 100%; text-align: center; padding-top: 6%; min-height: 100%;">
-	 <div class = "content-inside">
-				<section class = "nav">
-		 <ul>
-		   <li>
-		     <a id = "button0">Latte</a>
-		     <a id = "button1" style="border-left: solid black; border-right: solid black">Black</a>
-		     <a id = "button2" style="border-right: solid black">Cold Brew</a>
-		     <a id = "button3">Mocha</a>
-		   </li>
-		  </ul>
-		 </section>
-		</div> <br> <br>
-		 <div id = "images">
-			<img class = "product" id='image0' src='latte.jpg'>
-			<img class = "product" id='image1' src='black.jpg'>
-			<img class = "product" id='image2' src='cold-brew.jpg'>
-			<img class = "product" id='image3' src='mocha.jpg'>
-		</div> <br>
-		<div id='texts'>
-			<p class = "text" id ='text0'>A Coder latte is the creamiest of our espresso selections. Two-thirds of the beverage is steamed milk, poured over a shot of espresso and topped with a layer of milk foam.</p>
-			<p class = "text" id='text1'>Our famous Black Coffee is made from high-quality 100% Arabica beans and is freshly ground and brewed continually throughout the day.</p>
-			<p class = "text" id ='text2'>An ultra-smooth, full-bodied coffee like no other. We’ve steeped 100% Arabica beans in cold water for 12 hours to slowly extract all the flavor into this velvety brew.</p>
-			<p class = "text" id='text3'>Did someone say layers on layers of hand-crafted deliciousness? Made with creamy milk and topped with two shots of espresso, our Mocha is just what you're looking for.</p>
-		</div>
-	</div>
+
+<div style = "width: 100%; text-align: center;">
+ <nav>
+ <ul>
+   <li>
+     <a id = "button0">Latte</a>
+     <a id = "button1" style="border-left: solid black; border-right: solid black">Black</a>
+     <a id = "button2" style="border-right: solid black">Cold Brew</a>
+     <a id = "button3" style="border-right: solid black">Mocha</a>
+     <a id = "button4" style="border-right: solid black">Croissant</a>
+     <a id = "button5" style="border-right: solid black">Bagel</a>
+     <a id = "button6" style="border-right: solid black;">Macaron</a>
+     <a id = "button7">Pie</a>
+   </li>
+  </ul>
+ </nav> <br>
+</div> <br> <br>
+ <div id = "images">
+	<img id='image0' src='latte.jpg'>
+	<img id='image1' src='black.jpg'>
+	<img id='image2' src='cold-brew.jpg'>
+	<img id='image3' src='mocha.jpg'>
+  <img id='image4' src='croissant.jpg'>
+  <img id='image5' src='bagel.jpg'>
+  <img id='image6' src='macaron.jpg'>
+  <img id='image7' src='pie.jpg'>
+
+</div> <br>
+<div id='texts'>
+	<p id ='text0'>A Coder latte is the creamiest of our espresso selections. Two-thirds of the beverage is steamed milk, poured over a shot of espresso and topped with a layer of milk foam.</p>
+	<p id='text1'>Our famous Black Coffee is made from high-quality 100% Arabica beans and is freshly ground and brewed continually throughout the day.</p>
+	<p id ='text2'>An ultra-smooth, full-bodied coffee like no other. We’ve steeped 100% Arabica beans in cold water for 12 hours to slowly extract all the flavor into this velvety brew.</p>
+	<p id='text3'>Did someone say layers on layers of hand-crafted deliciousness? Made with creamy milk and topped with two shots of espresso, our Mocha is just what you're looking for.</p>
+  <p id='text4'>This classic Croissant is made with 100 percent butter to create a golden, crunchy top and soft, flakey layers inside. The perfect match for a cup of Pike Place Roast.</p>
+  <p id='text5'>A delicious bagel with your favorite cream cheese spread. Enjoy with your favorite morning coffee!</p>
+  <p id='text6'>These delicate treats are a rainbow of color, dusted with glitter, and a pillow of sweet decadence. Biting into them reveals their signature crunchy outside and chewy center.</p>
+  <p id='text7'>This recipe guarantees apple pie with perfectly cooked (not mushy) apples surrounded by a thickened and gently spiced sauce all baked inside a flaky, golden brown crust.</p>
+
+</div>
 	
-	<footer>
+            <footer>
                 <div class = "left"> <!-- address -->
                     <p><b>Address</b></p>
                     <p>880 Broadway</p>
@@ -94,7 +101,6 @@
                     <a><p>Contact</p></a>
                 </div>
             </footer>
-</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -102,7 +108,7 @@
 
 $(document).ready(function(){
 
-    for (i = 0 ; i < 4; i++){
+    for (i = 0 ; i < 8; i++){
 		$("#image" + i).hide();
 		$("#text" + i).hide();
 	}
@@ -139,6 +145,37 @@ $(document).ready(function(){
         	$("#text3").fadeOut().siblings().hide();
     });
 
+  $("#button4").hover(function(){
+          $("#image4").fadeIn().siblings().hide();
+          $('#text4').fadeIn().siblings().hide();
+        }, function(){
+          $("#image4").fadeOut().siblings().hide();
+          $("#text4").fadeOut().siblings().hide();
+    });
+
+  $("#button5").hover(function(){
+          $("#image5").fadeIn().siblings().hide();
+          $('#text5').fadeIn().siblings().hide();
+        }, function(){
+          $("#image5").fadeOut().siblings().hide();
+          $("#text5").fadeOut().siblings().hide();
+    });
+
+  $("#button6").hover(function(){
+          $("#image6").fadeIn().siblings().hide();
+          $('#text6').fadeIn().siblings().hide();
+        }, function(){
+          $("#image6").fadeOut().siblings().hide();
+          $("#text6").fadeOut().siblings().hide();
+    });
+
+  $("#button7").hover(function(){
+          $("#image7").fadeIn().siblings().hide();
+          $('#text7').fadeIn().siblings().hide();
+        }, function(){
+          $("#image7").fadeOut().siblings().hide();
+          $("#text7").fadeOut().siblings().hide();
+    });
 });
 
 
