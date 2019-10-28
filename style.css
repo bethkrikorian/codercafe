@@ -150,7 +150,7 @@ h1 {
 
 p {
     font-family: 'Candara', sans-serif !important;
-    color: #241d13 !important;
+    color: #241d13;
 }
 
 body {
