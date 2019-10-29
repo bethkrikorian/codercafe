@@ -11,6 +11,17 @@
       font-family: 'Candara', sans-serif;
       color: #241d13;
     }
+    
+    div.responses {
+      float: left;
+      width: 30%;
+    }
+    
+    div.prompts {
+      float: left;
+      width: 30%;
+      margin-left: 30%;
+    }
   </style>
   <link rel = "stylesheet" type = "text/css" href = "./style.css" />
 </head>
@@ -49,22 +60,25 @@
 
   <div class="container" style="padding: 40px; margin:0px 0px;">
     <form >
-      <label>First Name:</label> <br>
-      <input type="text" placeholder="Enter your name"> </br>
-      <label>Last Name:</label> <br>
-      <input type="text" placeholder="Enter your last name">
-        </br>
-      <label>What do you want to learn about?</label> <br>
-      <select style="margin: 0px 250px; padding-right: 50px">
-        <option value="">Pick an option</option>
-        <option value="Orders">Your Orders</option>
-        <option value="Products">Products</option>
-        <option value="Events">Events</option>
-        <option value="Other">Other</option>
-      </select> </br>
-      <label>Subject:</label> </br>
-      <textarea placeholder="Tell us about your question..." style="margin: 0px 250px; padding: 0px 100px 50px 0px"></textarea>
-        </br>
+      <div class = "prompts">
+        <label>First Name:</label>
+        <label>Last Name:</label>
+        <label>What do you want to learn about?</label>
+        <label>Subject:</label>
+      </div>
+      <div class = "responses">
+        <input type="text" placeholder="Enter your name">
+        <input type="text" placeholder="Enter your last name">
+        <select style="margin: 0px 250px; padding-right: 50px">
+          <option value="">Pick an option</option>
+          <option value="Orders">Your Orders</option>
+          <option value="Products">Products</option>
+          <option value="Events">Events</option>
+          <option value="Other">Other</option>
+        </select>
+        <textarea placeholder="Tell us about your question..." style="margin: 0px 250px; padding: 0px 100px 50px 0px"></textarea>
+      </div>
+  
       <input type="submit" style="border-radius: 5px; background-color: #3aa7c2; color: #fcf8f5; padding: 12px 20px; cursor: pointer;margin-left:0px; font-size:15px">
     </form>
   </div>
