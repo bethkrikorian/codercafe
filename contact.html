@@ -2,21 +2,52 @@
 
 <html>
 <head>
-  <title>
-  Contacts - Coder Cafe
-  </title>
+  <title>Coder Café - Contact</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     input {margin: 0px 250px}
+    
+    label {
+      font-family: 'Candara', sans-serif;
+      color: #241d13;
+    }
   </style>
+  <link rel = "stylesheet" type = "text/css" href = "./style.css" />
 </head>
 
 <body>
-  <h1 style="text-align: center;  padding-top: 30px;"> 
-    Reach Out to Us! </h1>
-  <h2 style="padding: 20px 40px; margin-left: 380px"> Contact Form: </h2>
+        <header>
+            <div class="header-content">
+                <p class = "left light">Tel: (781) GO-CODER</p>
+                <p class = "right light">Email: info@codercafe.com</p>
+            </div>
+        </header>
 
-  <div class="container" style="padding: 10px 40px; margin:0px px; background-color:#ffebb0">
+        <nav>
+            <div class = "left nav-stuff">
+                <ul>
+                    <a class="nav-link" href = "./about-us"><li>About</li></a>
+                    <a class="nav-link" href = "./products"><li>Products</li></a>
+                    <a class="nav-link" href = "./order"><li>Order</li></a>
+                </ul>
+            </div>
+            <div class = "logo nav-stuff"><a href = "./index"><img src = "./coder-cafe-logo.png" class = "logo-img"/></a>
+            </div> <!-- logo -->
+            <div class = "right nav-stuff">
+                <ul>
+                    <a class="nav-link" href = "./events"><li>Events</li></a>
+                    <a class="nav-link" href = "./reviews"><li>Reviews</li></a>
+                    <a class="nav-link" href = "./contact"><li>Contact</li></a>
+                </ul>
+            </div>
+        </nav>
+  
+  <div class = "page-container">
+  <h1 style="text-align: center;  padding-top: 1em;"> 
+    Reach Out to Us! </h1>
+  <h2 style="text-align: center;"> Contact Form: </h2>
+
+  <div class="container" style="padding: 40px; margin:0px px;">
     <form >
       <label>First Name:</label> <br>
       <input type="text" placeholder="Enter your name"> </br>
@@ -32,11 +63,24 @@
         <option value="Other">Other</option>
       </select> </br>
       <label>Subject:</label> </br>
-      <textarea placeholder="Tell us about your question..." style="margin: 0px 250px; padding: 0px 100px 100px 0px"></textarea>
+      <textarea placeholder="Tell us about your question..." style="margin: 0px 250px; padding: 0px 100px 50px 0px"></textarea>
         </br>
-      <input type="submit" style="background-color: #228B22; color:white; padding: 12px 20px; cursor: pointer;margin-left:0px; font-size:15px">
+      <input type="submit" style="border-radius: 5px; background-color: #3aa7c2; color: #fcf8f5; padding: 12px 20px; cursor: pointer;margin-left:0px; font-size:15px">
     </form>
   </div>
+            <footer>
+                <div class = "left"> <!-- address -->
+                    <p><b>Address</b></p>
+                    <p>880 Broadway</p>
+                    <p>Medford, MA 02155</p>
+                </div>
+                <div class = "right right-align"> <!-- footer menu -->
+                    <p><b>Quick Links</b></p>
+                    <a><p>Order</p></a>
+                    <a><p>Contact</p></a>
+                </div>
+            </footer>
+</div>
 </body>
 
 

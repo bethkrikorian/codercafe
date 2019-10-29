@@ -2,12 +2,9 @@
 <html>
 
 <head>
-    <title>CoderCafeOrder</title>
+    <title>Coder Café - Order</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel = "stylesheet" type = "text/css" href = "style.css" />
-    
-
-</head>
+    <link rel = "stylesheet" type = "text/css" href = "./style.css" />
     <style>
     
    
@@ -29,12 +26,8 @@
         margin-bottom: 10px;
     }
     
-    .text {
-        font-size: 120%;
-        margin:0px;
-    }
-    div{
-        font-size: 120%;
+    div.mydiv {
+        font-size: 110%;
         margin:0px;
     }
     h1, h3{
@@ -81,8 +74,14 @@
         flex: 50%;
         padding:0px 20px 0px 20px;
     }
-    
+        
+    div.wrapper {
+        padding: 3% 0 0 3%;
+    }
     </style>
+
+</head>
+    
 
     <header>
         <div class="header-content">
@@ -111,55 +110,56 @@
     </nav>
 
     <div class = "page-container">
+        <div class = "wrapper" >
         <form>
                 <h1 style= "font-size: 400%">Order</h1>
-                <p style= "font-size:200%; padding-bottom: 15px;" > We now deliver to your homes! Order now to treat yourself
+                <p style= "font-size:120%; padding-bottom: 15px;" > We now deliver to your homes! Order now to treat yourself
                     to some of our delicious coffee now!</p>
 
-                <div class="row">
+                <div class="row mydiv">
 
-                    <div style="position:relative;" class="column">
+                    <div style="position:relative;" class="column mydiv">
                             <h3>Beverages</h3>
                     <li class="border"> 
-                        <div class="row">
-                            <div class="column">
-                                <p class = "text">Mocca</p>
+                        <div class="row mydiv">
+                            <div class="column mydiv">
+                                <p>Mocha</p>
                                 <button type="button" class = "fade" onclick="calculate(0)">$3.99</button>
                             </div>
-                            <div class="column">
+                            <div class="column mydiv">
                                 <img class="responsive" src= "mocha.jpg" height="80px" alt="mocha">
                             </div>
                         </div>
                     </li>
                     <li class="border">
-                        <div class="row">
-                            <div class="column">
-                                <p class = "text">Cold Brew</p> 
+                        <div class="row mydiv">
+                            <div class="column mydiv">
+                                <p>Cold Brew</p> 
                                 <button type = "button" class = "fade" onclick="calculate(1)">$4.25</button>
                             </div>
-                            <div class="column">
+                            <div class="column mydiv">
                                 <img class="responsive" src="cold-brew.jpg" height="80px" alt="cold-brew">
                             </div>
                         </div>
                     </li>
                     <li class="border">
-                        <div class="row">
-                            <div class="column">
-                                <p class = "text">Latte</p> 
+                        <div class="row mydiv">
+                            <div class="column mydiv">
+                                <p>Latte</p> 
                                 <button type = "button" class = "fade" onclick="calculate(2)">$4.25</button>
                             </div>
-                            <div class="column">
+                            <div class="column mydiv">
                                 <img class="responsive" src="latte.jpg" height="80px" alt="latte">
                             </div>
                         </div>
                     </li>
                     <li class="border">
-                        <div class="row">
-                            <div class="column">
-                                <p class = "text">Black</p> 
+                        <div class="row mydiv">
+                            <div class="column mydiv">
+                                <p>Black</p> 
                                 <button type = "button" class = "fade" onclick="calculate(3)">$2.25</button>
                             </div>
-                            <div class="column">
+                            <div class="column mydiv">
                                      <img class="responsive" src="black.jpg" height="80px" alt="black coffee">
                             </div>
                         </div>
@@ -168,48 +168,48 @@
 
 
                     </div>
-                    <div style="position:relative;" class="column">
+                    <div style="position:relative;" class="column mydiv">
                             <h3>Pastries</h3>
                             <li class="border">
-                                <div class="row">
-                                    <div class="column">
-                                        <p class = "text">Croisstant</p>
+                                <div class="row mydiv">
+                                    <div class="column mydiv">
+                                        <p>Croissant</p>
                                         <button type="button" class = "fade" onclick="calculate(4)">$2.50</button>
                                     </div>
-                                    <div class="column">
+                                    <div class="column mydiv">
                                         <img class="responsive" src= "croissant.jpg" height="80px" alt="croissant">
                                     </div>
                                 </div>
                             </li>
                             <li class="border">
-                                <div class="row">
-                                    <div class="column">
-                                        <p class = "text">Bagel</p> 
+                                <div class="row mydiv">
+                                    <div class="column mydiv">
+                                        <p>Bagel</p> 
                                         <button type = "button" class = "fade" onclick="calculate(5)">$3.49</button>
                                     </div>
-                                    <div class="column">
+                                    <div class="column mydiv">
                                         <img class="responsive" src="bagel.jpg" height="80px" alt="bagel">
                                     </div>
                                 </div>
                             </li>
                             <li class="border">
-                                <div class="row">
-                                    <div class="column">
-                                        <p class = "text">Macaron</p> 
+                                <div class="row mydiv">
+                                    <div class="column mydiv">
+                                        <p>Macaron</p> 
                                         <button type = "button" class = "fade" onclick="calculate(6)">$1.25</button>
                                     </div>
-                                    <div class="column">
+                                    <div class="column mydiv">
                                         <img class="responsive" src="macaron.jpg" height="80px" alt="macaron">
                                     </div>
                                 </div>
                             </li>
                             <li class="border">
-                                <div class="row">
-                                    <div class="column">
-                                        <p class = "text">Pie</p> 
+                                <div class="row mydiv">
+                                    <div class="column mydiv">
+                                        <p>Pie</p> 
                                         <button type = "button" class = "fade" onclick="calculate(7)">$5.50</button>
                                     </div>
-                                    <div class="column">
+                                    <div class="column mydiv">
                                              <img class="responsive" src="pie.jpg" height="80px" alt="pie">
                                     </div>
                                 </div>
@@ -219,15 +219,16 @@
 
                     </div>
 
-                    <div style="position:relative " class="column" id = "summary">
-                        <div style="padding:15px 10px 15px 5px" id = "order_summary"> </div>
-                        <div style="padding:15px 10px 15px 5px" id = "total_price"> </div>
+                    <div style="position:relative " class="column mydiv" id = "summary">
+                        <div style="padding:15px 10px 15px 5px" id = "order_summary" class = "mydiv"> </div>
+                        <div style="padding:15px 10px 15px 5px" id = "total_price" class = "mydiv"> </div>
                         <button type = "button" onclick="res()"> Reset Order </button>
                         <button type = "button" onclick= "deli()"> Order </button>
                     </div>
                 </div>
 
             </form>
+        </div>
 
             <footer>
                     <div class = "left"> <!-- address -->
