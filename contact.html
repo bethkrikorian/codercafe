@@ -22,6 +22,10 @@
       width: 30%;
       margin-left: 30%;
     }
+    
+    div.form-elem {
+      padding: 0.4em;
+    }
   </style>
   <link rel = "stylesheet" type = "text/css" href = "./style.css" />
 </head>
@@ -67,16 +71,16 @@
         <div><label>Subject:</label></div>
       </div>
       <div class = "responses">
-        <div><input type="text" placeholder="Enter your name"></div>
-        <div><input type="text" placeholder="Enter your last name"></div>
-        <div><select style="margin: 0; padding-right: 50px">
+        <div class = "form-elem"><input type="text" placeholder="Enter your name" style = "background-color: #fcf8f5;"></div>
+        <div class = "form-elem"><input type="text" placeholder="Enter your last name" style = "background-color: #fcf8f5;"></div>
+        <div class = "form-elem"><select style="margin: 0; padding-right: 50px; background-color: #fcf8f5;">
           <option value="">Pick an option</option>
           <option value="Orders">Your Orders</option>
           <option value="Products">Products</option>
           <option value="Events">Events</option>
           <option value="Other">Other</option>
           </select></div>
-        <div><textarea placeholder="Tell us about your question..." style="margin: 0; padding: 0px 100px 50px 0px"></textarea></div>
+        <div class = "form-elem"><textarea placeholder="Tell us about your question..." style="margin: 0; padding: 0px 100px 50px 0px; background-color: #fcf8f5;"></textarea></div>
       </div>
   
       <input type="submit" style="border-radius: 5px; background-color: #3aa7c2; color: #fcf8f5; padding: 12px 20px; cursor: pointer;margin-left:0px; font-size:15px">
