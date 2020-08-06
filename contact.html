@@ -5,12 +5,34 @@
   <title>Coder Café - Contact</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    input {margin: 0px 250px}
     
     label {
       font-family: 'Candara', sans-serif;
       color: #241d13;
     }
+    
+    div.prompts {
+      float: left;
+      width: 30%;
+    }
+    
+    div.responses {
+      float: left;
+      width: 30%;
+      margin-left: 15%;
+    }
+    
+    div.form-elem {
+      padding: 3px;
+    }
+    
+    div.form-label {
+      padding: 9px;
+    }
+
+    input, textarea {
+      border-radius: 5px;
+    }  
   </style>
   <link rel = "stylesheet" type = "text/css" href = "./style.css" />
 </head>
@@ -47,39 +69,44 @@
     Reach Out to Us! </h1>
   <h2 style="text-align: center;"> Contact Form: </h2>
 
-  <div class="container" style="padding: 40px; margin:0px px;">
+  <div style="padding: 40px;">
     <form >
-      <label>First Name:</label> <br>
-      <input type="text" placeholder="Enter your name"> </br>
-      <label>Last Name:</label> <br>
-      <input type="text" placeholder="Enter your last name">
-        </br>
-      <label>What do you want to learn about?</label> <br>
-      <select style="margin: 0px 250px; padding-right: 50px">
-        <option value="">Pick an option</option>
-        <option value="Orders">Your Orders</option>
-        <option value="Products">Products</option>
-        <option value="Events">Events</option>
-        <option value="Other">Other</option>
-      </select> </br>
-      <label>Subject:</label> </br>
-      <textarea placeholder="Tell us about your question..." style="margin: 0px 250px; padding: 0px 100px 50px 0px"></textarea>
-        </br>
-      <input type="submit" style="border-radius: 5px; background-color: #3aa7c2; color: #fcf8f5; padding: 12px 20px; cursor: pointer;margin-left:0px; font-size:15px">
+      <div style = "height: 13em;">
+        <div class = "prompts">
+          <div class = "form-label"><label>First Name:</label></div>
+          <div class = "form-label"><label>Last Name:</label></div>
+          <div class = "form-label"><label>What do you want to learn about?</label></div>
+          <div class = "form-label"><label>Subject:</label></div>
+        </div>
+        <div class = "responses">
+          <div class = "form-elem"><input type="text" placeholder="Enter your name" style = "background-color: #fcf8f5; padding: 10px 0 10px 10px;"></div>
+          <div class = "form-elem"><input type="text" placeholder="Enter your last name" style = "background-color: #fcf8f5; padding: 10px 0 10px 10px;"></div>
+          <div class = "form-elem"><select style="margin: 0; padding-right: 50px; background-color: #fcf8f5;">
+            <option value="">Pick an option</option>
+            <option value="Orders">Your Orders</option>
+            <option value="Products">Products</option>
+            <option value="Events">Events</option>
+            <option value="Other">Other</option>
+            </select></div>
+          <div class = "form-elem"><textarea placeholder="Tell us about your question..." style="margin: 0; padding: 10px 100px 50px 10px; background-color: #fcf8f5;"></textarea></div>
+        </div>
+      </div>
+  
+      <div style = "width: 100%; height: 5em;"><input type="submit" style="border-radius: 5px; float: left; background-color: #3aa7c2; color: #fcf8f5; padding: 12px 20px; cursor: pointer;margin:2em 0 0 0; font-size:15px"></div>
     </form>
   </div>
-            <footer>
-                <div class = "left"> <!-- address -->
-                    <p><b>Address</b></p>
-                    <p>880 Broadway</p>
-                    <p>Medford, MA 02155</p>
-                </div>
-                <div class = "right right-align"> <!-- footer menu -->
-                    <p><b>Quick Links</b></p>
-                    <a><p>Order</p></a>
-                    <a><p>Contact</p></a>
-                </div>
-            </footer>
+      <footer>
+          <div class = "left"> <!-- address -->
+              <p><b>Address</b></p>
+              <p>880 Broadway</p>
+              <p>Medford, MA 02155</p>
+          </div>
+          <div class = "right right-align"> <!-- footer menu -->
+              <p><b>Quick Links</b></p>
+              <a><p>Order</p></a>
+              <a><p>Contact</p></a>
+          </div>
+      </footer>
 </div>
 </body>
 
